@@ -19,11 +19,6 @@ public class BillsController {
 	@Autowired
 	private BillsService service;
 	
-	@GetMapping("/test")
-	public String test() {
-		return "ssa";
-	}
-	
 	@PostMapping("/insertBillsData")
 	public String insertBillsData(@RequestBody List<Double> bills) {
 		return service.insertBillsData(bills);
